@@ -67,7 +67,7 @@
   </style>
 </head>
 <body>
-  <h1 id="question">Nisa bu salak Kürşat'ı affeder misin?</h1>
+  <h1 id="question">Nisa bu salak Kürşat'ı son bir defa daha affeder misin?</h1>
 
   <div class="button-container">
     <button id="yesBtn">Evet</button>
@@ -104,11 +104,20 @@
       "Belki de bir şans vermelisin?",
       "İçinden evet demek gelmiyor mu?",
       "Kalbinin sesini dinle... 💓",
-      "Son kararın mı? 😢",
+      "özür dilerim 😢",
       "Ama çok üzgünüm 😢",
       "Senin için her şeyi yaparım 😢",
       "Lütfen son bir şans? 😢",
       "Çok pişmanım 😢",
+      "sen bana kıyamazsın 😢",
+      "kimse senden önemli değil 😢",
+      "son bir şans daha lütfeeeeenn 😢",
+      "İzin ver zaman karar versin 😢",
+      "Ama her şey çok güzel olacak 😢",
+      "Yanında olmak istiyorum 😢",
+      "Sana destek olmak istiyorum 😢",
+      "Fotoğrafına bakarak uyuyorum her gece 😢",
+      "Hiç aklımdan çıkmıyorsun 😢"
     ];
     let questionIndex = 0;
     let noConverted = false;
@@ -120,7 +129,6 @@
         noConverted = true;
       }
 
-      // Soru metnini sırayla değiştir
       if (questionIndex < questionVariants.length) {
         question.textContent = questionVariants[questionIndex];
         questionIndex++;
@@ -140,17 +148,6 @@
 
       questionFontSize = Math.max(16, questionFontSize * 0.9);
       question.style.fontSize = `${questionFontSize}px`;
-
-      const yesBtnWidth = yesBtn.offsetWidth;
-      const windowWidth = window.innerWidth;
-
-      if (yesBtnWidth > windowWidth * 0.6) {
-        question.style.opacity = '0';
-        question.style.pointerEvents = 'none';
-      } else {
-        question.style.opacity = '1';
-        question.style.pointerEvents = 'auto';
-      }
     });
 
     yesBtn.addEventListener('click', () => {
